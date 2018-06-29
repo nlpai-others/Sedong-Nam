@@ -25,4 +25,4 @@ while True:
        t_y = trainings_Y[i] # 실제값
        err += abs(y-t_y) # 오차
    print ("a=", a, "b=", b, "err=", err)
-   time.sleep(0.1)
+   time.sleep(1)
