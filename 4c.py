@@ -3,15 +3,15 @@
 import matplotlib.pyplot as plt
 
 # trainings (x,y) pairs
-training = [[1,2],[3,6],[7,14],[2,4],[4,8]]
+trainings = [[1,2],[3,6],[7,14],[2,4],[4,8]]
 
-training_X = [row[0] for row in trainings]
-training_Y = [row[1] for row in trainings]
+trainings_X = [row[0] for row in trainings]
+trainings_Y = [row[1] for row in trainings]
 
 import random
 import time
 
-# °¡Á¤ : y = ax + b
+#ê°€ì • : y = ax + b
 
 while True:
    a = random.uniform(0,10)
@@ -19,10 +19,10 @@ while True:
 
    err = 0
 
-   #¿ÀÂ÷
+   #ì˜¤ì°¨
    for i, t_x in enumerate(trainings_X):
-       y = a * t_x + b #°¡Á¤°ª
-       t_y = trainings_Y[i] # ½ÇÁ¦°ª
-       err += abs(y-t_y) # ¿ÀÂ÷
+       y = a * t_x + b #ê°€ì •ê°’
+       t_y = trainings_Y[i] # ì‹¤ì œê°’
+       err += abs(y-t_y) # ì˜¤ì°¨
    print ("a=", a, "b=", b, "err=", err)
-   time.sleep(1)
+   time.sleep(0.1)
