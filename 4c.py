@@ -43,4 +43,5 @@ while True:
    print ("count = ", count)
    print ("a=", a, "b=", b, "err=", err)
    print ("  ", "best_a= ", best_a, "best_b = ", best_b, "err_min =", err_min)
+   # a = 2, b =0, err 는 0에 가까워야 함
    time.sleep(0.01)    
