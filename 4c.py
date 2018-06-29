@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import matplotlib.pyplot as plt
+import sys
 
 # trainings (x,y) pairs
 trainings = [[1,2],[3,6],[7,14],[2,4],[4,8]]
@@ -18,11 +19,15 @@ while True:
    b = random.uniform(0,10)
 
    err = 0
+    
 
    #오차
    for i, t_x in enumerate(trainings_X):
-       y = a * t_x + b #가정값
-       t_y = trainings_Y[i] # 실제값
-       err += abs(y-t_y) # 오차
-   print ("a=", a, "b=", b, "err=", err)
-   time.sleep(1)
+      y = a * t_x + b #가정값
+      t_y = trainings_Y[i] # 실제값
+      err += abs(y-t_y) # 오차
+      if err < 0.1:
+         print ("a=", a, "b=", b, "err=", err)
+         sys.exit(1)
+   #print ("a=", a, "b=", b, "err=", err)
+   time.sleep(0.01)    
